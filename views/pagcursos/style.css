@@ -1,0 +1,1250 @@
+@font-face {
+    font-family: 'espander'; /* Escolha um nome para a fonte */
+    src: url('fontes/espander-regular.ttf') format('truetype'); /* O caminho para o arquivo da fonte */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+html {
+    scroll-behavior: smooth; /* Ativa a rolagem suave */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.5;
+
+}
+
+body {
+  background-color: hsla(207, 15%, 12%, 0.164);
+  margin: 0; /* Remove margens padrão do body */
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 67px;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsla(207, 15%, 12%, 0.616);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.596);
+  color: #f0f0f0;
+  text-align: center;
+}
+
+header .interface {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; /* Adiciona um pouco de espaçamento lateral */
+}
+
+header .logo img {
+  max-height: 50px;
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+header .menu-desktop nav ul {
+  list-style-type: none;
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+}
+
+header .menu-desktop nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+header .menu-desktop nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+header .menu-desktop nav ul li a {
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+header .menu-desktop nav ul li a:hover {
+  transform: scale(1.05);
+  color: #00b31e;
+}
+
+header .menu-desktop nav ul li a.active {
+  transform: scale(1.05);
+  color: #00b31e; 
+  font-weight: bold;/* Destaque para o ativo */
+ 
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  header .interface {
+      flex-direction: row; /* Mantém a direção em linha */
+      align-items: center; /* Alinhamento central */
+  }
+
+  header .menu-desktop nav ul {
+      display: flex; /* Mantém o menu em linha */
+      justify-content: center; /* Centraliza o menu */
+      width: auto; /* Largura automática */
+  }
+
+  header .menu-desktop nav ul li {
+      margin: 0 5px; /* Mantém um espaçamento entre os itens */
+  }
+
+  header .logo img {
+      width: 100%; /* Ajusta a largura da logo */
+      max-height: 40px; /* Ajusta o tamanho máximo da logo */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      height: 50px; /* Diminui a altura do header em telas pequenas */
+  }
+
+  header .menu-desktop nav ul li a {
+      font-size: 14px; /* Reduz o tamanho da fonte do menu */
+  }
+}
+
+/* Estilo - Hero */
+section.hero-site {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    padding-left: 150px; /* Ajustado para mover o texto um pouco mais para a direita */
+}
+
+.hero-site .txt-hero {
+    max-width: 500px; /* Define uma largura máxima para o texto */
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span {
+    display: block;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero p span {
+    display: block;
+}
+
+.hero-site button {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 20px;
+   
+}
+
+
+
+.about {
+    padding: 40px 20px;
+    background-color: #f0f0f0; /* Fundo cinza */
+    text-align: center; /* Centraliza o título */
+    font-family: 'espander',sans-serif;
+}
+
+.heading {
+    margin-bottom: 30px;
+    font-size: 2em; /* Tamanho do título */
+    font-family: 'espander',sans-serif;
+  
+}
+
+.row {
+    display: flex; /* Alinha imagem e conteúdo lado a lado */
+    justify-content: center; /* Centraliza a linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    background-color: #ffffff; /* Fundo branco para a seção interna */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px #9d00ff; /* Sombreamento da caixa */
+    padding: 20px;
+    max-width: 800px; /* Largura máxima da caixa */
+    margin: 0 auto; /* Centraliza a caixa na tela */
+
+}
+
+.image {
+    flex: 1; /* A imagem ocupa 50% do espaço */
+    padding-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.image img {
+    width: 100%; /* A imagem ocupa a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombreamento na imagem */
+}
+
+.content {
+    flex: 1; /* O conteúdo ocupa 50% do espaço */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-style: normal;
+    font-family: 'Quicksand' ;
+    color: #ffffff;
+    
+    
+}
+
+.content h3 {
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-size: 15px;
+    padding: 30px;
+    font-style: normal;
+    font-family: 'Quicksand';
+    text-align: justify;
+    line-height:2;
+    
+    
+}
+
+.content p {
+    margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+    font-family: 'Quicksand';
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-size: 15px;
+    padding: 30px;
+    font-style: normal;
+    font-family: 'Quicksand';
+    text-align: justify;
+    line-height:2;
+}
+
+.btn {
+    display: inline-block; /* Para que o botão tenha um tamanho adequado */
+    padding: 10px 20px; /* Espaço interno do botão */
+    background-color: #00b31e; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas no botão */
+    text-decoration: none; /* Remove underline do link */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+    margin-left: 30px; /* Adiciona margem à esquerda */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.591); /* Sombra do box */
+    margin-top: -160px;
+}
+
+.btn:hover {
+    background-color: #00b31ea4; /* Cor do botão ao passar o mouse */
+}
+
+.review {
+  
+    text-align: center; /* Centraliza o título e o conteúdo */
+    background-color:hsl(210, 16%, 12%);
+    
+}
+
+.heading {
+    margin-bottom: 30px;
+    font-size: 2em; /* Tamanho do título */
+    color: #ffffff;
+    font-size: 70px;
+    
+}
+
+.box-container {
+    display: flex;
+    justify-content: center; /* Centraliza os boxes */
+    flex-wrap: wrap; /* Permite que os boxes quebrem para a próxima linha se necessário */
+}
+
+.box {
+    background-color: #f9f9f9; /* Fundo do box */
+    border: 1px solid #ccc; /* Borda do box */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 15px; /* Espaço entre os boxes */
+    max-width: 300px; /* Largura máxima dos boxes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra do box */
+    text-align: center; /* Centraliza o texto dentro do box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Levanta a box ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.quote {
+    width: 100%; /* Imagem ocupa a largura do box */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 20px 20px 0 0; /* Bordas arredondadas na parte superior */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombreamento na imagem */
+    filter: grayscale(100%); /* Inicialmente preto e branco */
+    transition: filter 0.5s ease; /* Efeito de transição */
+    filter: grayscale(0); /* A imagem ganha cor ao passar o mouse */
+}
+
+.box:hover .quote {
+    filter: grayscale(100%); /* Inicialmente preto e branco */
+
+}
+
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura do container */
+  background: hsl(210, 16%, 12%);
+  box-shadow: 0 4px 15px #000000; /* Sombreamento na imagem */
+  
+  
+}
+
+.map {
+    flex: 1; /* Mapa ocupa 50% do espaço */
+    min-width: 300px; /* Largura mínima do mapa */
+    height: 400px; /* Altura do mapa */
+    margin-right: 20px; /* Espaço entre o mapa e o formulário */
+    align-items: center;
+}
+
+form {
+    flex: 1; /* Formulário ocupa 50% do espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.inputbox input {
+    flex: 1; /* Input ocupa todo o espaço disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4b146d; /* Cor do botão */
+    color: white; /* Texto do botão */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #291d33; /* Cor do botão ao passar o mouse */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura total da tela */
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgb(0, 0, 0); /* Sombra do box */
+}
+
+.mySlides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; 
+  opacity: 0; 
+  transition: opacity 1.5s ease-in-out; 
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+}
+
+.mySlides.active {
+  display: block; 
+  opacity: 1; 
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto; /* Permite que a altura se ajuste automaticamente */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .slideshow-container {
+    height: 60vh; /* Ajusta a altura do slideshow em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 40vh; /* Ajusta a altura para dispositivos móveis */
+  }
+}
+
+.cursost {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do seu contêiner pai */
+  max-width: 850px; /* Define uma largura máxima para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços embaixo da imagem */
+  margin: 0 auto; /* Centraliza a imagem no contêiner */
+}
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: #fff;
+  --black-color: hsl(210, 12%, 15%);
+  --body-color: hsl(210, 16%, 12%);
+  --container-color: hsl(210, 24%, 8%);
+ 
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+}
+
+.card__container, .card__article {
+  display: grid;
+  gap: 2rem;
+}
+
+.card__container {
+  padding-block: 4.5rem;
+
+
+
+}
+ .card__article  {
+  --hue-1: 210;
+  --hue-2: 238;
+  position: relative;
+  justify-items: center;
+  color: var(--white-color);
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border: 4px solid transparent;
+  background: linear-gradient(var(--container-color), var(--container-color)) padding-box, linear-gradient(135deg, hsl(var(--hue-1), 85%, 70%) 0%, var(--container-color), var(--container-color), hsl(var(--hue-2), 70%, 55%) 100%) border-box;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.card__shape-1  {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  background: linear-gradient(140deg, hsl(var(--hue-1), 75%, 25%) 3%, hsl(var(--hue-2), 65%, 45%) 100%);
+  border-radius: 2rem;
+  z-index: 2;
+}
+.card__shape-2  {
+  width: 116px;
+  height: 116px;
+  background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
+  border-radius: 1.5rem;
+}
+.card__shape-3 {
+  width: 76px;
+  height: 76px;
+  background: linear-gradient(140deg, hsl(var(--hue-1), 85%, 60%) 3%, hsl(var(--hue-2), 85%, 60%) 100%);
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+}
+.card__shape-2, .card__shape-3 {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.card__icon {
+  font-size: 3rem;
+}
+.card__data {
+  z-index: 3;
+}
+.card__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.card__description {
+  margin-bottom: 1.5rem;
+}
+.card__button {
+  display: inline-block;
+  background-color: var(--white-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: var(--black-color);
+  font-weight: 500;
+}
+.card__orange {
+  --hue-1: 300;
+  --hue-2: 30;
+}
+.card__green {
+  --hue-1: 180;
+  --hue-2: 50;
+}
+.card__scale-1 {
+  width: 148px;
+  height: 148px;
+  background: linear-gradient(140deg, hsl(var(--hue-1), 70%, 50%) 3%, hsl(var(--hue-2), 95%, 45%) 100%);
+  border-radius: 2rem;
+  top: 4rem;
+}
+.card__scale-2 {
+  width: 116px;
+  height: 116px;
+  background: var(--container-color);
+  border-radius: 1.5rem;
+  top: 5rem;
+}
+
+.card__blue-deep {
+    --hue-1: 210;
+    --hue-2: 45; /* Amarelo */
+  }
+  
+  .card__purple-bright {
+    --hue-1: 238;
+    --hue-2: 180; /* Verde mint */
+  }
+  
+  .card__coral-light {
+    --hue-1: 10;
+    --hue-2: 30; /* Azul profundo */
+  }
+
+  
+.card__scale-1, .card__scale-2 {
+  position: absolute;
+  filter: blur(24px);
+  transition: transform 0.3s ease-in;
+}
+.card__article:hover .card__scale-1 {
+  transform: scale(6);
+}
+.card__article:hover .card__scale-2 {
+  transform: scale(6);
+  transition-delay: 0.1s;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .card__article {
+    padding: 2rem 1rem;
+  }
+  .card__scale-1 {
+    top: 2rem;
+  }
+  .card__scale-2 {
+    top: 3rem;
+  }
+}
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .card__container {
+    grid-template-columns: 328px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 328px);
+  }
+}
+/* For large devices */
+@media screen and (min-width: 102px) {
+  .container {
+    height: 100vh;
+  }
+  .card__container {
+    grid-template-columns: repeat(3, 345px);
+  }
+  .card__article {
+    padding: 4.5rem 2rem 3.5rem;
+  }
+}
+/* Contêiner principal para centralizar a grid */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+/* Definir a grid dos cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Primeira linha com 4 cards */
+  gap: 20px;
+  justify-items: center;
+  grid-auto-rows: auto;
+}
+
+/* Card individual */
+.card3 {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Icone do SVG */
+.card3 svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Efeito de hover nos cards */
+.card3:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo do card */
+.card__content3 {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(117, 11, 188, 0.552);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Exibir o conteúdo ao passar o hover no card */
+.card3:hover .card__content3 {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+/* Título do card */
+.card__title3 {
+  margin: 0;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+/* Descrição do card */
+.card__description3 {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Efeito no SVG ao passar o hover */
+.card3:hover svg {
+  scale: 0;
+}
+
+/* Card da segunda linha (Centralizando) */
+.card-grid .card3:nth-child(5) {
+  grid-column: 2 / span 1;
+}
+.card-grid .card3:nth-child(6) {
+  grid-column: 3 / span 1;
+}
+.card-grid .card3:nth-child(7) {
+  grid-column: 4 / span 1;
+}
+
+
+/* Centralizar os cards da segunda linha */
+.card-grid .card3:nth-child(5),
+.card-grid .card3:nth-child(6),
+.card-grid .card3:nth-child(7),
+.card-grid .card3:nth-child(8) {
+  grid-column: span 1;
+}
+
+/* Forçar a distribuição para que as linhas fiquem equilibradas */
+.card-grid {
+  grid-template-columns: repeat(4, 1fr); /* Garantir que a grid tem 4 colunas */
+  grid-template-rows: auto; /* Ajustar as linhas automaticamente */
+  gap: 20px;
+}
+
+/* general styling */
+:root {
+  --smaller: .75;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+.container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+ 
+  list-style-type: none;
+  padding: 1em;
+
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+}
+:root {
+--trueBlack: #000;  --purple: #7437d69c;
+  --aqua: #ffffff;
+  --fuchsia: #fd49a0;
+  --white: #ffffff;
+  --black: hsl(210, 16%, 12%);
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cards_item {
+  display: flex;
+}
+
+.card_image {
+  display: flex;
+  height: 250px;
+  box-shadow: 0 50px 100px 0 var(--violet);
+}
+
+.card_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--purple);
+  border-radius: 5px 25px 5px 50px;
+  transition: transform 0.1s linear, box-shadow 0.2s;
+}
+
+
+.card:focus,
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  padding: 0.5rem 1rem 1rem;
+  color: var(--white);
+}
+
+.card_title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: auto;
+  color: var(--black);
+  padding: 0.5rem;
+  border-radius: 5px;
+  transform: rotate(-3.3deg);
+  transform-origin: left top;
+  font-weight: 600;
+  font-size: 1.325rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgb(230, 207, 7);
+  
+}
+
+
+
+.card_text {
+
+  line-height: 1.5;
+  text-size-adjust: 0.2px;
+  padding: 0 1rem;
+}
+
+
+
+@media (min-width: 480px) {
+  .card_text {
+    overflow: auto;
+    max-height: 20rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--aqua) var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .card_text::-webkit-scrollbar-track {
+    background: var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+  }
+}
+
+.card_text strong {
+  color: var(--aqua);
+}
+
+.upcharge {
+  position: relative;
+  font-weight: 600;
+  background-color: var(--violet);
+  padding: 0.5rem 0.75rem;
+  color: var(--trueBlack);
+  border-radius: 0 10px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.upcharge::after,
+.upcharge::before {
+  content: "+";
+  display: block;
+  line-height: 0;
+  font-size: 3rem;
+  position: absolute;
+  color: var(--purple);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.upcharge::before {
+  left: 0;
+  top: 0.5rem;
+}
+
+.upcharge::after {
+  right: 0;
+  bottom: 1.25rem;
+}
+
+.note {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 900;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 10%,
+    var(--aqua) 10.5%,
+    var(--aqua) 90%,
+    transparent 90.5%
+  );
+  color: var(--black);
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+@keyframes fly-in {
+  0% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
+
+  25% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  26% {
+    font-size: 2rem;
+  }
+
+  100% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+
+  50% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
+}
+
+
+
+
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo do Footer */
+footer {
+  background: #00000050 no-repeat;
+  color: #fff;
+  padding: 20px 300px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto; /* Faz o footer ficar sempre no final da página */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover e active */
+.footer-section ul li a:hover {
+  color: #28a745; /* Cor verde no hover */
+}
+
+.footer-section ul li a:active {
+  color: #28a745; /* Cor verde quando clicado */
+}
+
+/* Imagem centralizada */
+.footer-section img {
+  display: block;
+  margin: 0 auto 20px auto; /* Centraliza a imagem e dá um espaçamento inferior */
+  width: 100px;
+}
+
+/* Estilo da parte inferior do footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* Estilos para a seção do time */
+.team-section {
+  padding: 67px;
+  text-align: center;
+}
+
+/* Contêiner dos cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;  /* Alinha os cards com espaçamento entre eles */
+  gap: 10px;  /* Diminuído o espaço entre os cards */
+  flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas em telas menores */
+  margin: 0 auto;
+}
+
+/* Estilos de cada card */
+.c-card {
+  background: #9065d62f no-repeat;
+  padding: 16px;
+  width: 22%;  /* A largura dos cards foi ajustada para 22% */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.c-card:hover {
+  transform: translateY(-10px); /* Efeito de elevação */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+/* Estilo da imagem do card */
+.card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Torna a imagem redonda */
+  margin-bottom: 1rem;
+  object-fit: cover; /* Garante que a imagem preencha bem a área */
+}
+
+/* Título dos cards */
+.c-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto dos cards */
+.c-card p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+   .card-container {
+      justify-content: center;
+   }
+
+   .c-card {
+      width: 45%;  /* Os cards vão ocupar mais espaço na tela em dispositivos menores */
+   }
+
+   .card-img {
+      width: 80px;
+      height: 80px;
+   }
+}
+.icon-container {
+  display: flex; /* Coloca os elementos lado a lado */
+  gap: 10px; /* Espaçamento entre os ícones */
+  justify-content: center; /* Centraliza os ícones no container */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.card__icon {
+  margin: 0; /* Remove margens para evitar desalinhamento */
+}
+/* Estilo para os ícones com hover */
+/* Estilo para os ícones com hover */
+.icon-hover {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: white; /* Cor inicial */
+  font-size: 30px !important; /* Tamanho inicial, com !important para garantir que seja aplicado */
+  margin: 0 10px; /* Espaçamento entre os ícones */
+}
+
+
+.c-card:nth-child(1) .icon-hover:hover {
+  color: #a672d1; /* Cor para o card 1 */
+}
+
+.c-card:nth-child(2) .icon-hover:hover {
+  color: #cf6ad3; /* Cor para o card 2 */
+}
+
+.c-card:nth-child(3) .icon-hover:hover {
+  color: #7cbfcf; /* Cor para o card 3 */
+}
+
+.c-card:nth-child(4) .icon-hover:hover {
+  color: #87db00; /* Cor para o card 4 */
+}
+
+.icon-hover:hover {
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
